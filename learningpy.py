@@ -29,4 +29,20 @@ print("hello" + users_name + ", welcome")
 #float	 = Similar to integer but for non whole (decimal) numbers  	(1.234)
 #list	 = Used to store many items of data in an order e.g. a list a peoples names	["Martin", "Rik", "Hitesh"]
 
+#Note: the double == operator means “is this equal to?” 
+#Opposed to a single = which follows a variable and means “make this equal to”.
+
+1==1 ; True
+
+#! = is the operator for is not equal to,
+# which means this statement means is 1 not equal to 2. != is the opposite of the == operator.
+
+1 != 2
+#  != is the operator for is not equal to, which means this statement means
+# is 1 not equal to 2. != is the opposite of the == operator.
+
+# you can use <= test if something is less than or equal to:
+
+1 <=1
+ #True!
 
