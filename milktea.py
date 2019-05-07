@@ -5,6 +5,9 @@ if question1 == "no":
     tea = input("do you know how to make tea? ")
     if tea == "no":
         print("boil water first, then add a tea packet into the water and let it sit for a couple minutes")
+    else:
+        print("i'm sorry, i don't understand, please reply with either 'yes' or 'no'.")
+
 elif question1 == "yes":
     print("that's great to hear! ")
 else:
