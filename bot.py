@@ -5,7 +5,7 @@ users_name = input("What is your name? ")
 if users_name == "Victoria":
     print("Hey, I know you! Welcome back!")
 else:
-        print("Hello, nice to meet you " + users_name + "!")
+    print("Hello, nice to meet you " + users_name + "!")
 
 phrase = input("Talk to me about anything: ")
 if phrase == "hi" or phrase == "hey":
