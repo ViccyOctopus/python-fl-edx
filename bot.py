@@ -18,7 +18,7 @@ else:
     print("Sorry, I don't understand this :(")
 
 command = input("I can add numbers, subtract numbers, find the area of a rectangle, or average numbers. What would you like to do? ")
-if command == "add numbers" or command == "add" or "Add numbers":
+if command == "add numbers" or command == "add" or command == "Add numbers":
     print("Lets add some numbers!")
     input1 = input("Number 1> ")
     input2 = input("Number 2> ")
@@ -27,7 +27,7 @@ if command == "add numbers" or command == "add" or "Add numbers":
     result = number1 + number2
     output = str(result)
     print(input1 + " + " + input2 + " = " + output)
-elif command == "subtract" or command == "subtract numbers" or "Subtract numbers":
+elif command == "subtract" or command == "subtract numbers" or command == "Subtract numbers":
     print("Let's subtract some numbers!")
     input1 = input("Number 1> ")
     input2 = input("Number 2> ")
