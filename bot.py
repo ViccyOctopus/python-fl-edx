@@ -7,7 +7,7 @@ if users_name == "Victoria":
 else:
     print("Hello, nice to meet you " + users_name + "!")
 
-phrase = input("Talk to me about anything: ")
+phrase = input("Talk to me about anything. ")
 if phrase == "hi" or phrase == "hey":
     print("Hello!")
 elif phrase == "what's your name" or phrase == "whats your name" or phrase == "what is your name" or phrase == "what's your name?" or phrase == "what is your name?":
@@ -17,8 +17,8 @@ elif phrase == "what's up" or phrase == "whats up" or phrase == "what's up?" or 
 else:
     print("Sorry, I don't understand this :(")
 
-command = input("How about we add some numbers? ")
-if command == "okay" or command == "alright" or command == "let's do it" or command == "sure" or command == "ok":
+command = input("I can add numbers, subtract numbers, find the area of a rectangle, or average numbers. What would you like to do? ")
+if command == "add numbers" or command == "add" or "Add numbers":
     print("Lets add some numbers!")
     input1 = input("Number 1> ")
     input2 = input("Number 2> ")
@@ -27,11 +27,8 @@ if command == "okay" or command == "alright" or command == "let's do it" or comm
     result = number1 + number2
     output = str(result)
     print(input1 + " + " + input2 + " = " + output)
-else:
-    print("Sorry, I don't understand this :(")
 
-command2 = input("Wanna subtract some numbers? ")
-if command2 == "sure" or command2 == "alright" or command2 == "okay" or command2 == "let's do it" or command2 == "ok" or command2 == "yes":
+if command == "subtract" or command == "subtract numbers" or "Subtract numbers":
     print("Let's subtract some numbers!")
     input1 = input("Number 1> ")
     input2 = input("Number 2> ")
@@ -40,11 +37,8 @@ if command2 == "sure" or command2 == "alright" or command2 == "okay" or command2
     result = number1 - number2
     output = str(result)
     print(input1 + " - " + input2 + " = " + output)
-else:
-    print("Sorry, I don't understand this :(")
 
-command3 = input("I can help you find the area of a rectangle as well, wanna try? ")
-if command3 == "sure" or command3 == "alright" or command3 == "okay" or command3 == "let's do it" or command3 == "ok" or command3 == "yes":    
+if command == "find the area of a rectangle" or command == "Find the area of a rectangle" or command == "area" or command == "Area" or command == "Area of rectangle":    
     print("If you don't remember the formula for the area of a rectangle, I can help!") 
     print("Just measure any two sides that share a corner and I'll do the rest...") 
     input1 = input("Length of first side: ") 
@@ -55,13 +49,8 @@ if command3 == "sure" or command3 == "alright" or command3 == "okay" or command3
     result = str(area) 
     print("The area of your rectangle is: " + result) 
     print("The forumula is Side 1 x Side 2: " + input1 + " x " + input2 + " = " + result)
-elif command3 == "no" or command3 == "nah" or command3 == "x" or command3 == " ":
-    print("Alright, take care")
-else:
-    print("Sorry, I don't understand this :(")
 
-command4 = input("Would you like to learn how to average? ")
-if command4 == "sure" or command4 == "alright" or command4 == "okay" or command4 == "let's do it" or command4 == "ok" or command4 == "yes":
+if command == "average numbers" or command == "Average numbers":
     how_many = input("How many numbers? ")
     how_many = int(how_many)
     total = 0
@@ -70,7 +59,8 @@ if command4 == "sure" or command4 == "alright" or command4 == "okay" or command4
         total = total + int(number)
     result = total / how_many
     print("The average = " + str(result))
-
-
+    
+else:
+    print("Sorry, I don't understand this :(")
 
 print("Bye!")
