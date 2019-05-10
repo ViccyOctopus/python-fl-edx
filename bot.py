@@ -27,8 +27,7 @@ if command == "add numbers" or command == "add" or "Add numbers":
     result = number1 + number2
     output = str(result)
     print(input1 + " + " + input2 + " = " + output)
-
-if command == "subtract" or command == "subtract numbers" or "Subtract numbers":
+elif command == "subtract" or command == "subtract numbers" or "Subtract numbers":
     print("Let's subtract some numbers!")
     input1 = input("Number 1> ")
     input2 = input("Number 2> ")
@@ -37,8 +36,7 @@ if command == "subtract" or command == "subtract numbers" or "Subtract numbers":
     result = number1 - number2
     output = str(result)
     print(input1 + " - " + input2 + " = " + output)
-
-if command == "find the area of a rectangle" or command == "Find the area of a rectangle" or command == "area" or command == "Area" or command == "Area of rectangle":    
+elif command == "find the area of a rectangle" or command == "Find the area of a rectangle" or command == "area" or command == "Area" or command == "Area of rectangle":    
     print("If you don't remember the formula for the area of a rectangle, I can help!") 
     print("Just measure any two sides that share a corner and I'll do the rest...") 
     input1 = input("Length of first side: ") 
@@ -49,8 +47,7 @@ if command == "find the area of a rectangle" or command == "Find the area of a r
     result = str(area) 
     print("The area of your rectangle is: " + result) 
     print("The forumula is Side 1 x Side 2: " + input1 + " x " + input2 + " = " + result)
-
-if command == "average numbers" or command == "Average numbers":
+elif command == "average numbers" or command == "Average numbers":
     how_many = input("How many numbers? ")
     how_many = int(how_many)
     total = 0
@@ -59,8 +56,6 @@ if command == "average numbers" or command == "Average numbers":
         total = total + int(number)
     result = total / how_many
     print("The average = " + str(result))
-    
 else:
     print("Sorry, I don't understand this :(")
-
 print("Bye!")
