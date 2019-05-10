@@ -30,7 +30,7 @@ if command == "okay" or command == "alright" or command == "let's do it" or comm
 else:
     print("Sorry, I don't understand this :(")
 
-command2 = input("Wanna subtract some numbers too? ")
+command2 = input("Wanna subtract some numbers? ")
 if command2 == "sure" or command2 == "alright" or command2 == "okay" or command2 == "let's do it" or command2 == "ok" or command2 == "yes":
     print("Let's subtract some numbers!")
     input1 = input("Number 1> ")
@@ -59,5 +59,18 @@ elif command3 == "no" or command3 == "nah" or command3 == "x" or command3 == " "
     print("Alright, take care")
 else:
     print("Sorry, I don't understand this :(")
+
+command4 = input("Would you like to learn how to average? ")
+if command4 == "sure" or command4 == "alright" or command4 == "okay" or command4 == "let's do it" or command4 == "ok" or command4 == "yes":
+    how_many = input("How many numbers? ")
+    how_many = int(how_many)
+    total = 0
+    for number_count in range(how_many):
+        number = input("Enter number "+ str(number_count +1) + "> ")
+        total = total + int(number)
+    result = total / how_many
+    print("The average = " + str(result))
+
+
 
 print("Bye!")

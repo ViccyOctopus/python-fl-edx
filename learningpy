@@ -1,0 +1,131 @@
+print("Hello world")
+This will just print whatever is inside the quotation when you run the program.
+
+print("Hello")
+print("I am a computer")
+This, when it is run, shows that sequencing matters. It will show "hello" before "I am a computer".
+
+To create a variable in Python you give it a name and make it equal to a value.
+This is known as assignment. For example:
+
+my_variable = "some useful data"
+
+my_name = "Victoria"
+print(my_name)
+
+When using print you put the name of the variable between the () instead of text. 
+The print instruction will retrieve the value from the my_name variable and display it.
+Then...
+
+print("My name is" + my_name)
+
+input is another command
+input() uses the function input to display a prompt and capture the user’s response.
+users_name = input("enter your name")
+print("hello" + users_name + ", welcome")
+
+
+boolean function: Used for storing values which can only ever be true or false	True or False
+float = Similar to integer but for non whole (decimal) numbers  	(1.234)
+list = Used to store many items of data in an order e.g. a list a peoples names	["Martin", "Rik", "Hitesh"]
+
+Note: the double == operator means “is this equal to?” 
+Opposed to a single = which follows a variable and means “make this equal to”.
+
+1==1 ; True
+
+! = is the operator for is not equal to,
+which means this statement means is 1 not equal to 2. != is the opposite of the == operator.
+
+1 != 2
+!= is the operator for is not equal to, which means this statement means
+is 1 not equal to 2. != is the opposite of the == operator.
+
+you can use <= test if something is less than or equal to:
+
+1 <=1
+ #True!
+
+evaluation: determining the value of an expression, e.g. True or False.
+selection: enabling computers to make choices.
+==, !=, <, >: different ways to compare numbers in Python.
+if, then, elif, else: making code run depending whether a statement is true or false.
+and, or: applying logic operations to conditions.
+scope: defining what code belongs to what part of the program.
+indentation: adding spaces to the start of lines of code in Python so that it understand scope.
+
+Get the middle three characters from the phrase variable.
+phrase[1:4]
+
+with phrase = "hello"
+if its phrase[0], then you will have an output of "h". the order starts from zero, and presents those characters.
+
+phrase[1:4] runs "ell"
+
+when you do :, The element at index 4 is “o”, but “o” isn’t output. 
+The end_index in a range is up to, but not including.
+
+0 1 2 3 4
+h e l l o
+  - - - >
+Challenge: Get the last two characters from the phrase variable.
+
+Tip: If you want to get a range which is from the start or up to the end of a list, you can leave the start or end index blank. E.g.
+
+phrase[:3] - runs "hel"
+phrase[3:] - runs "lo"
+-------------------------------------------------------
+my_list = [1, 2, 3, 4, 5]
+If you want to create an empty list, which you will append items to later in your program, you can use empty square brackets: [].
+
+my_list = []
+Note: Lists can contain all different types of data: integers, strings, and anything else. They can even contain other lists. 
+
+names = ["martin", "laura", "hitesh", "caitlyn", "renee"]
+if you input this and then
+
+names[1]
+you will output "laura"
+
+Append a new name to the end of your list of names.
+names.append("lauren")
+- this adds "lauren" to the end of the list
+
+you can type "names" to make sure that its at the end of the list now.
+
+names.insert(2, "dan")
+^ this allows you to insert "dan" into where 2 should be, between laura and hitesh.
+
+As a last step let’s remove the name “martin” from the list.
+
+names.remove("martin")
+^ this removes the name, wherever it is.
+
+To loop through each of the items in the list, you will use a "for" loop. for loops exist in most programming languages, and their purpose is to allow code to be run a set number of times – in our case, equal to the number of things in our shopping list.
+
+The syntax of a for loop in Python looks like this:
+
+for element in list:
+    print("do this")
+
+for #display_shopping.py 
+- count + 1 is evaluated first: the computer calculates the current value of count plus 1.
+
+Next the computer sets the value of count to the result of step 1.
+
+count is now equal to ‘whatever it was before’, plus 1.
+
+Now let’s print out how many items are in the shopping list.
+
+At the end of your program, not indented under the for, print the value of count.
+
+Create a variable called count at the top of the display_shopping program and set it to zero:
+ - count = 0
+
+
+ By using range we can simplify the example program above:
+
+for number in range(5):
+    print(number)
+Note: - range(5) will create a list of five numbers from 0 to 4, not six numbers from 0 to 5.
+
