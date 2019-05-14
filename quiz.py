@@ -32,14 +32,3 @@ percent = (total_score*100)/2
 percent_total = str(percent)
 
 print("You got " + total_score1 + " questions right in this quiz, giving you a score of " + percent_total + "%")
-
-
-
-
-
-
-
-
-
-
-
