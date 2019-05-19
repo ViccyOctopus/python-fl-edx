@@ -129,3 +129,5 @@ for number in range(5):
     print(number)
 Note: - range(5) will create a list of five numbers from 0 to 4, not six numbers from 0 to 5.
 
+
+
