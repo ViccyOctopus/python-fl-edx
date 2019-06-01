@@ -131,3 +131,20 @@ Note: - range(5) will create a list of five numbers from 0 to 4, not six numbers
 
 
 
+while True: is the “usual” way of creating an infinite loop in Python and 
+although it looks a bit strange, it makes sense when you understand whats happening.
+
+First consider this program:
+
+keep_running = True
+while keep_running == True:
+    input("press enter")
+
+
+The variable keep_running will always be equal to True and as it is never changed to False this program will run forever and is infinite.
+
+If keep_running is always True the same program could be written as follows replacing the keep_running variable with True:
+
+while True == True:
+    input("press enter")
+
