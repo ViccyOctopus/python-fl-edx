@@ -15,3 +15,20 @@ if command == "add":
     print(magnitude1 + "+" + magnitude2 + "=" + outcome1)
 elif command == "subtract":
     print(magnitude1 + "-" + magnitude2 + "=" + outcome2)
+
+
+
+def do_calculation():
+    print("lets " + command + " some numbers")
+    input1 = input("Number 1>")
+    input2 = input("Number 2>")
+    number1 = int(input1)
+    number2 = int(input2)
+    if command == "add":
+        result = number1 + number2
+        operator = " + "
+    elif command == "subtract":
+        result = number1 - number2
+        operator = " - "
+    output = str(result)
+    print(input1 + operator + input2+ " = " + output)
