@@ -148,3 +148,10 @@ If keep_running is always True the same program could be written as follows repl
 while True == True:
     input("press enter")
 
+
+
+conditional loops: while this, do that
+infinite loops: repeat this forever
+abstraction: why it is useful to abstract coding into reusable pieces
+functions: how to create re-usable code which can be called from your program
+
