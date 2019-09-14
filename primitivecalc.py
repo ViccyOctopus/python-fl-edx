@@ -16,8 +16,6 @@ if command == "add":
 elif command == "subtract":
     print(magnitude1 + "-" + magnitude2 + "=" + outcome2)
 
-
-
 def do_calculation():
     print("lets " + command + " some numbers")
     input1 = input("Number 1>")

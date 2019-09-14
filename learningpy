@@ -149,9 +149,12 @@ while True == True:
     input("press enter")
 
 
+<<<<<<< HEAD
 
 conditional loops: while this, do that
 infinite loops: repeat this forever
 abstraction: why it is useful to abstract coding into reusable pieces
 functions: how to create re-usable code which can be called from your program
 
+=======
+>>>>>>> 27cdcbab36b9865e0ff52ed9222ef03f21c4180e
