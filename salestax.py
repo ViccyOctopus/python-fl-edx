@@ -1,5 +1,3 @@
-import math
-
 print("What is the original price of the product?")
 oriPrice = input()
 intPrice = int(oriPrice)
