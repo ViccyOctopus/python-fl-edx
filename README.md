@@ -14,3 +14,5 @@ Here’s a few ideas to add to the bot:
 
 Main project:
 Make the bot have a "drop down" select menu as to what you want it to do.
+
+CURRENTLY WORKING ON Folder Edx
