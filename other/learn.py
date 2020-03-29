@@ -167,3 +167,58 @@ while num > 0:
     num = num//2
 if isNeg:
     result = '-' + result
+
+
+def printName(firstName, lastName, reverse):
+    if reverse:
+        print(lastName + ", " + firstName)
+    else:
+        print(firstName, Lastname)
+
+printName('Victoria','Arzumanova', False)
+
+
+def mult_iter(a,b):
+    result = 0
+    while b > 0:
+        result += a
+        b -= 1
+    return result
+
+#Multiply a*b, which is the same as adding a to itself b times
+#It subtracts b once, then adds a, subtracts b once, adds a
+#Suppose you want to do 5 times 3
+#b: 5 4 3 2  1  0
+#a: 3 6 9 12 15
+
+
+def fib(x):
+    if x == 0 or x == 1:
+        return 1
+    else:
+        return fib(x-1) + fib(x-2)
+
+#the file circle.py contains
+pi = 3.14159
+def area(radius):
+    return pi*(radius**2)
+def circumference(radius):
+    return 2*pi*(radius)
+
+import circle
+pi = 3
+print(pi)
+print(circle.pi)
+print(circle.area(3))
+print(circle.circumference(3))
+
+This gives you:
+
+3
+3.14149
+28.27431
+18.84953999999998
+
+from circle import *
+print(pi)
+print(area(3))
