@@ -222,3 +222,56 @@ This gives you:
 from circle import *
 print(pi)
 print(area(3))
+
+
+te = ()
+
+t = (2, "one", 3)
+
+t[0] #evaluates to 2
+
+(2, "one", 3) + (5,6) #evaluates to (2, "one", 3, 5, 6)
+
+t[1:2] # slices tuple, evaluates to ("one,")
+
+t[1:3] #slices tuple, evaluates to ("one", 3)
+
+t[1] = 4 #gives error, can't modify object
+
+
+def quotient_and_remainder(x,y):
+    q = x//y
+    r = x%y
+    return (q,r)
+(quot, rem) = quotient_and_remainder(4,5)
+
+
+a_list = [] # this is an empty list
+b_list = [2, 'a', 4, True]
+L = [2, 1, 3]
+
+len(L)  #evaluates to 3
+L[0] #evaluates to 2
+L[2] + 1 #evaluates to 4
+L[3] #gives an error
+
+i = 2
+L[i-1] #evaluates to 1 since L[1] = 1 from above
+
+L[1] = 5
+#L is now [2, 5, 3], this is how you can change the elements in a list
+
+
+
+total = 0
+    for i in range(len(L)):
+        total += L[i]
+    print(total)
+
+total = 0
+    for i in L:
+        total += i
+    print(total)
+
+L1 = [2,1,3]
+L2 = [4,5,6]
