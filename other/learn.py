@@ -275,3 +275,150 @@ total = 0
 
 L1 = [2,1,3]
 L2 = [4,5,6]
+L3 = L1 + L2    #L3 is [2,1,3,4,5,6]
+L1.extend([0,6])#mutated L1 to [2,1,3,0,6]
+
+L = [2,1,3,6,3,7,0] #do below in order
+L.remove(2)   #mutates L = [1,3,6,3,7,0]
+L.remove(3)   #mutates L = [1,6,3,7,0]
+del(L[1])     #mutates L = [1,3,7,0]
+L.pop()      #returns 0 and mutates L = [1,3,7]
+
+
+warm = ['red', 'yellow', 'orange']
+hot = warm
+
+#if you print warm or hot, you get the same thing
+
+hot.append('pink')
+print(hot)
+
+#you get ['red', 'yellow', 'orange', 'pink]
+#BUT, the same thing prints out for both warm and hot
+#Now, let's look at a different case, these are different versions of the same set of strings
+
+cool = ['blue', 'green', 'grey']
+chill = ['blue', 'green', 'grey']
+
+print(cool)
+print(chill)
+#gives the same answer, but they're not the same
+
+chill[2] = 'blue'
+print(cool)
+# gives you ['blue', 'green', 'grey']
+print(chill)
+# gives you ['blue', 'green', 'blue']
+
+
+cool = ['blue', 'green', 'grey']
+chill = cool[:]
+#this creates a copy, a clone of cool
+
+chill.append('black')
+print(chill)
+#prints out ['blue', 'green', 'grey', 'black']
+
+print(cool)
+#prints out ['blue', 'green', 'grey']
+
+This makes sense, they have not changed
+
+warm = ['yellow', 'orange']
+hot = ['red']
+brightcolors = [warm]
+#this gives you [['yellow', 'orange']]
+
+brightcolors.append(hot)
+print(brightcolors)
+# this gives you [['yellow', 'orange'], ['red']]
+
+hot.append('pink')
+print(brightcolors)
+#this gives you [['yellow', 'orange'], ['red', 'pink']]
+
+
+def applyToEach(L, f):
+    """assumes L is a list, f is a function
+    mutates L by replacing each element, e
+    of L by f(e)"""
+    for i in range(len(L)):
+        L[i] = f(L[i])
+
+
+my_dict = {}
+grades = {'Ana':'B', 'John':'A+', 'Denise':'A', 'Katy':'A'}
+
+grades['John']
+#Outputs 'A+'
+
+grades['Sylvan']
+#Gives a KeyError
+
+grades['Sylvan'] = 'A'
+grades['Sylvan']
+#Outputs 'A'
+
+
+'John' in grades
+#Outputs True
+
+'Daniel' in grades
+#Outputs False
+
+
+del(grades'Ana')
+grades
+#Outputs {John':'A+', 'Denise':'A', 'Katy':'A', 'Sylvan':'A'}
+
+
+
+
+#Code to analyze song lyrics, its going to count how many times a word shows up
+#Then, find the word that occurs the most
+
+def lyrics_to_frequencies(lyrics):
+    myDict = {}
+    for word in lyrics:
+        if word in myDict:
+            myDict[word] += 1
+        else:
+            myDict[word] = 1
+    return myDict
+
+
+def most_common_words(freqs):
+    values = freqs.values()
+    best = mas(values)
+    words = []
+    for k in freqs:
+        if freqs[] == best:
+            words.append(k)
+    return (words, best)
+
+
+def fib_efficient(n,d):
+    if n in d:
+        return d[n]
+    else:
+        ans = fib_efficient(n-1, d) + fib_efficient(n-2, d)
+        d[n] = ans
+        return ans
+
+d = {1:1, 2:2}
+
+
+def fib_efficient(n,d):
+    global numFibCalls
+    numFibCalls += 1
+    if n in d:
+        return d[n]
+    else:
+        ans = fib_efficient(n-1, d) + fib_efficient(n-2, d)
+        d[n] = ans
+        return ans
+
+numFibCalls = 0
+d = {1:1, 2:2}
+print(fib_efficient(12,d))
+print('function calls', numFibCalls)
