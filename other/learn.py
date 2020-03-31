@@ -583,7 +583,135 @@ class Person(Animal):
     def __str__(self):
         return "person:" + str(self.name) + ":" + str(self.age)
 
+eric = Person("eric", 45)
+
+john = Person("john", 55)
+
+eric.speak()
+#Output: hello
+
+eric.age_diff(john)
+#Output: eric is 10 years younger than john
+
+Person.age_diff(john, eric)
+#Output: john is 10 years older than eric
+
+
+import random
+
+class Student(Person):
+    def __init__(self, name, age, major=None)
+        Person.__init__(self, name, age)
+        self.major = major
+    def change_major(self, major):
+        self = major
+    def speak(self):
+        r = random.random()
+        if r < 0.25:
+            print("i have homework")
+        elif 0.25 <= r < 0.5:
+            print("i need sleep")
+        elif 0.5 <= r < 0.75:
+            print("i should eat")
+        else:
+            print("i am watching tv")
+    ef __str__(self):
+        return "student:" + str(self.name)+ ":" + str(self.age) + ":" + str(self.major)
+
+eric = Person('Eric', 45)
+
+fred = Student('Fred', 18, 'Course VI')
+
+print(fred)
+#Outputs student:Fred:18:Course VI
+#It is different because it uses method from Student, not Person
 
 
 
 
+
+class Rabbit(Animal):
+    tag = 1
+    def __init__(self, age, parent1 = None, parent2 = None):
+        Animal.__init__(self, age)
+        self.parent1 = parent1
+        self.parent2 = parent2
+        self.rid = Rabbit.tag
+        Rabbit.tag +=1
+    def get_rid(self):
+        return str(self.rid) .zfill(3)
+        #the z.fill is a method on a string to pad the beginning with zeros for example, 001 not 1
+    def get_parent1(self):
+        return self.parent1
+    def get_parent2(self):
+        return self.parent2
+    def __add__(self, other):
+        return Rabbit(0, self, other)
+        #where self is parent1, and other is the other parent
+    def __eq__(self, other):
+        parents_same = self.parent1.rid == other.parent1.rid \
+            and self.parent2.rid == other.parent2.get_rid
+        parents_opposite = self.parent2.rid == other.parent1.rid \
+            and self.parent1.rid == other.parent2.get_rid
+        return parents_same or parents_opposite
+
+
+#The tag is used to give unique id to each new rabbit instance
+
+peter = Rabbit(2)
+peter.set_name('Peter')
+hopsy = Rabbit(3)
+hopsy.set_name('Hopsy')
+cotton = Rabbit(1, peter, hopsy)
+#here we're providing explicit arguments
+cotton.set_name('Cottontail')
+
+print(cotton)
+#Output: animal:Cottontail:1
+
+print(cotton.get_parent1())
+#Output: animal:Peter:2
+
+mopsy = peter + hopsy
+mopsy.set_name('Mopsy')
+print(mopsy.get_parent1())
+#Output: animal:Peter:2
+
+print(mopsy.get_parent2())
+#Output: animal:Hopsy:3
+
+print(mopsy == hopsy)
+#Output: True
+#Because their parents are the same
+
+
+import datetime
+
+class Person(object):
+    def __init__(self, name):
+        """create a person called name"""
+        self.name = name
+        self.birthday = None
+        self.lastName - name.split(' ')[-1]
+        #this last line here resembles the assumption that the last element in a name is a person's last name
+    def getLastName(self):
+        """return self's last name"""
+        return self.lastName
+    def __str__(self):
+        """return self's name"""
+        return self.name
+    def setBirthday(self, month, day, year):
+        """sets self's birthday to birthDate"""
+        self.birthday = datetime.date(year, month, day)
+    def getAge(self):
+        """return's self's current age in days"""
+        if self.birthday == None:
+            raise ValueError
+        return (datetime.date.today() - self.birthday).days
+    def __lt__(self, other):
+        """return True if the self's name is lexicographically less
+        than other's name, and False otherwise"""
+        if self.lastName == other.lastName:
+            return self.name < other.name
+        return self.lastName < other.lastName
+        
