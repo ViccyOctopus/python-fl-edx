@@ -422,3 +422,168 @@ numFibCalls = 0
 d = {1:1, 2:2}
 print(fib_efficient(12,d))
 print('function calls', numFibCalls)
+
+
+class Coordinate(obejct):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def distance(self, other):
+        x_diff_sq = (self.x-other.x)**2
+        y_diff_sq = (self.y-other.y)**2
+        return (x_diff_sq + y_diff_sq)**0.5
+    def __str__(self):
+        return "<" + str(self.x) + "," + str(self.y) + ">"
+
+
+print(c.distance(origin))
+#this outputs to 5
+
+
+c = Coordinate(3,4)
+origin = Coordinate(0.0)
+print(c.x)
+#The c.x says, print out the x variable associated with c, giving you three.
+print(origin.x)
+#This gives you the x value of origin (0,0), which gives you 0.
+
+print(isinstance(c, Coordinate))
+#Outputs to True
+
+class fraction(object):
+    def __init__(self, numer, denom):
+        self.numer = numer
+        self.denom = denom
+    def __str__(self):
+        return str(self.numer) + "/" + str(self.denom)
+    def getNumer(self):
+        return self.numer
+    def getDenom(self):
+        return self.denom
+    def __add__(self, other):
+        numerNew = other.getDenom() * self.getNumer() \
+            + other.getNumer() * self.getDenom)()
+        denomNew = other.getDenom() * self.getDenom() \
+        return fraction(numerNew, denomNew)
+    def __sub__(self, other)
+        numerNew = other.getDenom() * self.getNumer() \
+            - other.getNumer() * self.getDenom)()
+        denomNew = other.getDenom() * self.getDenom() \
+        return fraction(numerNew, denomNew)
+
+
+class intSet(object):
+    def __init__(self):
+        self.vals = []
+    def insert(self, e):
+        if not e in self.vals:
+            self.vals.append(e)
+    def member(self, e):
+        return e in self.vals
+    def remove(self, e):
+        try:
+            self.vals.remove(e)
+        except:
+            raise ValueError(str(e) + 'not found')
+    def __str__(self):
+        self.vals.sort()
+        result = ''
+        for e in self.vals:
+            result = result + str(e) + ','
+        return '{' + result[:-1] + '}'
+
+
+class Animal(object):
+    def __init__(self, age):
+        self.age = age
+        self.name = None
+    def get_age(self):
+        return self.age
+    def get_name(self):
+        return self.name
+    def set_age(self, newage):
+        self.age = newage
+    def set_name(self, newname =""):
+        self.name = newname
+    def __str__(self):
+        return "animal": + str(self.name) + ":" + str(self.age)
+
+class Cat(animal):
+    def speak(self):
+        print("meow")
+    def __str__(self):
+        return "cat:" + str(self.name) + ":" + str(self.age)
+
+
+jelly = Cat(1)
+#Sets Jelly, the name of a Cat, to be 1 years old.
+
+jelly.get_name()
+#Does not output anything, jelly does not have a name yet.
+
+jelly.set_name('JellyBelly')
+
+jelly.get_name()
+#Output: 'JellyBelly'
+#Jelly now has a name, it is JellyBelly
+
+print(jelly)
+#Output: cat:JellyBelly:1
+
+print(Animal.__str__(jelly))
+#Output: animal:JellyBelly:1
+
+blob = Animal(1)
+
+print(blob)
+#Output: animal.None:1
+
+blob.set_name()
+
+print(blob)
+#Output: animal::1
+
+
+class Rabbit(Animal):
+    def speak(self):
+        print("meep")
+    def __str__(self):
+        return "rabbit:" + str(self.name) + ":" + str(self.age)
+
+peter = Rabbit(5)
+
+jelly.speak()
+#Output: meow
+
+peter.speak()
+#Output: meep
+
+blob.speak()
+#Output: Error, because blob does not have his own category so it defaults to Animal, and Animal does not have a speak function
+
+
+class Person(Animal):
+    def __init__(self, name, age):
+        Animal.__init__(self, age)
+        Animal.set_name(self, name)
+        self.friends = []
+    def get_friends(self):
+        return self.friends
+    def add_friend(self, fname):
+        if fname not in self.friends:
+            self.friends.append(fname)
+    def speak(self):
+        print("hello")
+    def age_diff(self, other)
+    #alternate way: diff = self.age - other.age
+    diff = self.get_age() - other.get_age()
+    if self.age > other.age:
+            print(self.name, "is", diff, "years older than", other.name)
+            print(self.name, "is", -diff, "years younger than", other.name)
+    def __str__(self):
+        return "person:" + str(self.name) + ":" + str(self.age)
+
+
+
+
+
