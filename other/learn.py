@@ -1,8 +1,3 @@
-while <condition>:
-    <expression>
-    <expression>
-    ...
-
 n = input("You are in the Lost Forest. Go left or right? ")
 while n == "right":
     n = input("You are in the Lost Forest. Go left or right? ")
@@ -714,4 +709,6 @@ class Person(object):
         if self.lastName == other.lastName:
             return self.name < other.name
         return self.lastName < other.lastName
-        
+
+
+
