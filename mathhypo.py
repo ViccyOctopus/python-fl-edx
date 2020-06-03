@@ -1,6 +1,6 @@
 import math
 while True:
-    sidesq = input("what is the side of the square?: ")
+    sidesq = input("initial number: ")
     sidesq = int(sidesq)
     sidestri = 2*sidesq
     sidestri = int(sidestri)
@@ -18,3 +18,4 @@ while True:
     print("the estimated area of the equilateral triangle is " + ans)
 
     print("the difference would be " + difference)
+    print("-------------------------------------------------")
